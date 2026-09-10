@@ -1,444 +1,450 @@
 /* --- ПЕРЕМЕННЫЕ И БАЗОВЫЕ СТИЛИ --- */
 :root {
-    --color-terracotta: #d37a62;
-    --color-sage: #a6a88c;
-    --color-beige: #f7f5f0;
-    --color-text: #3b3630;
-    --color-white: #ffffff;
-    --font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --color-terracotta: #d37a62;
+  --color-sage: #a6a88c;
+  --color-beige: #f7f5f0;
+  --color-text: #3b3630;
+  --color-white: #ffffff;
+  --font-main: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: var(--font-main);
-    color: var(--color-text);
-    background-color: var(--color-beige);
-    line-height: 1.6;
-    overflow-x: hidden;
+  font-family: var(--font-main);
+  color: var(--color-text);
+  background-color: var(--color-beige); /* Возвращаем бежевый фон */
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
+/* Контейнер используется ТОЛЬКО внутри секций для центрирования контента */
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
 }
 
 /* --- ВЕРХНЯЯ ПАНЕЛЬ --- */
 .announcement-bar {
-    background-color: var(--color-terracotta);
-    color: var(--color-white);
-    text-align: center;
-    padding: 8px 0;
-    font-size: 12px;
-    letter-spacing: 0.5px;
+  background-color: var(--color-terracotta);
+  color: var(--color-white);
+  text-align: center;
+  padding: 8px 0;
+  font-size: 12px;
+  letter-spacing: 0.5px;
 }
 
 /* --- ШАПКА (HEADER) --- */
 header {
-    background-color: var(--color-beige);
-    padding: 20px 0;
+  background-color: var(--color-beige);
+  padding: 20px 0;
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.nav-links, .nav-utility {
-    display: flex;
-    gap: 20px;
-    font-size: 14px;
+.nav-links,
+.nav-utility {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
 }
 
-.logo {
-    font-size: 32px;
-    font-weight: bold;
-    font-family: serif; /* Замените на ваш шрифт */
-    color: var(--color-terracotta);
-    text-transform: lowercase;
+.logo img {
+  height: 40px; /* Фиксируем высоту логотипа */
+  width: auto;
 }
 
 /* --- ГЛАВНЫЙ БАННЕР (HERO) --- */
 .hero {
-    position: relative;
-    height: 600px;
-    background-color: #ccc; /* Заглушка */
-    background-image: url('https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    padding-bottom: 60px;
+  position: relative;
+  height: 600px; /* Можно изменить на 435px для точного соответствия Figma */
+  background-color: #ccc;
+  background-image: url(../images/hero_img.png);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 60px;
 }
 
 .hero-content {
-    background-color: var(--color-sage);
-    padding: 30px 40px;
-    text-align: center;
-    color: var(--color-white);
-    max-width: 400px;
-    width: 90%;
+  background-color: var(--color-sage);
+  padding: 30px 50px; /* Уменьшили вертикальные отступы, так как осталась только кнопка */
+  color: var(--color-white);
+  max-width: 550px; /* Оставляем ширину, чтобы блок выглядел как в макете */
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-content h2 {
-    font-size: 28px;
-    font-weight: normal;
-    margin-bottom: 15px;
+  font-size: 28px;
+  font-weight: normal;
+  margin-bottom: 15px;
 }
 
 .btn {
-    display: inline-block;
-    background-color: var(--color-terracotta);
-    color: var(--color-white);
-    padding: 12px 24px;
-    text-transform: uppercase;
-    font-size: 12px;
-    letter-spacing: 1px;
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s;
+  display: inline-block;
+  background-color: var(--color-terracotta);
+  color: var(--color-white);
+  padding: 12px 24px;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
 }
 
 .btn:hover {
-    background-color: #b5644f;
+  background-color: #b5644f;
 }
 
 /* --- СЕКЦИЯ "MEET MONSOON" --- */
 .monsoon-banner {
-    background-color: var(--color-sage);
-    color: var(--color-white);
-    padding: 60px 0;
+  background-color: var(--color-sage);
+  color: var(--color-white);
+  padding: 60px 0;
 }
 
 .monsoon-banner .container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .monsoon-banner h3 {
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
-    opacity: 0.8;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  opacity: 0.8;
 }
 
 .monsoon-banner h2 {
-    font-size: 32px;
-    font-weight: normal;
-    margin-bottom: 20px;
+  font-size: 32px;
+  font-weight: normal;
+  margin-bottom: 20px;
 }
 
 .monsoon-banner a {
-    text-decoration: underline;
-    font-size: 14px;
+  text-decoration: underline;
+  font-size: 14px;
 }
 
 /* --- СЕКЦИЯ ТОВАРОВ --- */
 .products {
-    padding: 80px 0;
-    text-align: center;
+  padding: 80px 0;
+  text-align: center;
+  background-color: #f6f4ec;
 }
 
 .products h2 {
-    font-size: 24px;
-    font-weight: normal;
-    margin-bottom: 40px;
+  font-size: 24px;
+  font-weight: normal;
+  margin-bottom: 40px;
 }
 
 .product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
 }
 
 .product-card {
-    text-align: left;
+  text-align: left;
 }
 
 .product-card img {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    margin-bottom: 15px;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  margin-bottom: 15px;
 }
 
 .product-card h4 {
-    font-size: 14px;
-    font-weight: normal;
-    text-transform: uppercase;
-    margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-bottom: 5px;
 }
 
 .product-card p {
-    font-size: 14px;
-    color: #666;
+  font-size: 14px;
+  color: #666;
 }
 
 /* --- БАННЕР С КНОПКОЙ --- */
 .full-width-banner {
-    position: relative;
-    background-image: url('https://images.unsplash.com/photo-1620916566398-39f1143ab7be?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
-    background-size: cover;
-    background-position: center;
-    height: 300px;
-    display: flex;
-    align-items: flex-end;
-    padding: 30px;
-    color: var(--color-white);
+  position: relative;
+  background-image: url(../images/full-width-banner.svg);
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  display: flex;
+  align-items: flex-end;
+  padding: 30px 0;
+  color: var(--color-white);
 }
 
 .full-width-banner::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0,0,0,0.3);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .banner-content {
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    max-width: 1200px;
-    margin: 0 auto;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 
 .banner-content p {
-    font-size: 18px;
-    max-width: 400px;
-    letter-spacing: 1px;
+  font-size: 18px;
+  max-width: 400px;
+  letter-spacing: 1px;
 }
 
 .banner-content a {
-    text-decoration: underline;
-    font-size: 14px;
+  text-decoration: underline;
+  font-size: 14px;
 }
 
 /* --- СЕКЦИЯ "MEET DAE" --- */
 .about-section {
-    padding: 100px 0;
-    background-color: var(--color-beige);
+  padding: 100px 0;
+  background-color: #f1d3b9;
 }
 
 .about-container {
-    display: flex;
-    align-items: center;
-    gap: 60px;
+  display: flex;
+  align-items: center;
+  gap: 60px;
 }
 
 .about-image {
-    flex: 1;
+  flex: 1;
 }
 
 .about-image img {
-    width: 100%;
-    height: 600px;
-    object-fit: cover;
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
 }
 
 .about-text {
-    flex: 1;
-    background-color: var(--color-white);
-    padding: 60px 50px;
-    position: relative;
-    /* Сдвиг для эффекта наложения, как на макете */
-    margin-left: -100px; 
-    z-index: 2;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  flex: 1;
+  background-color: var(--color-white);
+  padding: 60px 50px;
+  position: relative;
+  /* Сдвиг для эффекта наложения, как на макете */
+  margin-left: -100px;
+  z-index: 2;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 .about-text h2 {
-    font-size: 32px;
-    font-weight: normal;
-    margin-bottom: 25px;
-    color: var(--color-terracotta);
+  font-size: 32px;
+  font-weight: normal;
+  margin-bottom: 25px;
+  color: var(--color-terracotta);
 }
 
 .about-text p {
-    font-size: 15px;
-    line-height: 1.8;
-    margin-bottom: 30px;
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 30px;
 }
 
 .about-text a {
-    color: var(--color-terracotta);
-    text-decoration: underline;
-    font-size: 14px;
+  color: var(--color-terracotta);
+  text-decoration: underline;
+  font-size: 14px;
 }
 
 /* --- СОЦИАЛЬНЫЕ СЕТИ --- */
 .social-section {
-    padding: 60px 0;
-    text-align: center;
+  padding: 60px 0;
+  text-align: center;
+  background-color: #ffffff;
 }
 
 .social-section h2 {
-    font-size: 20px;
-    font-weight: normal;
-    margin-bottom: 30px;
+  font-size: 20px;
+  font-weight: normal;
+  margin-bottom: 30px;
 }
 
 .social-grid {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
 }
 
 .social-grid img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
 }
 
 /* --- ПОДВАЛ (FOOTER) --- */
 footer {
-    background-color: var(--color-beige);
-    padding: 60px 0 30px;
-    font-size: 12px;
+  background-color: var(--color-beige);
+  padding: 60px 0 30px;
+  font-size: 12px;
 }
 
 .footer-content {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 40px;
-    margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 40px;
 }
 
 .footer-links {
-    display: flex;
-    gap: 60px;
+  display: flex;
+  gap: 60px;
 }
 
 .footer-links ul {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .footer-links a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .footer-newsletter {
-    max-width: 350px;
-    text-align: right;
+  max-width: 350px;
+  text-align: right;
 }
 
 .footer-newsletter p {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .copyright {
-    border-top: 1px solid #ddd;
-    padding-top: 20px;
-    text-align: left;
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+  text-align: left;
 }
 
 /* --- АДАПТИВНОСТЬ (MEDIA QUERIES) --- */
 
 /* Планшеты (до 1024px) */
 @media (max-width: 1024px) {
-    .about-container {
-        flex-direction: column;
-        gap: 0;
-    }
-    
-    .about-image img {
-        height: 500px;
-    }
+  .about-container {
+    flex-direction: column;
+    gap: 0;
+  }
 
-    .about-text {
-        margin-left: 0;
-        margin-top: -50px;
-        width: 90%;
-        padding: 40px;
-    }
+  .about-image img {
+    height: 500px;
+  }
 
-    .social-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
+  .about-text {
+    margin-left: 0;
+    margin-top: -50px;
+    width: 90%;
+    padding: 40px;
+  }
+
+  .social-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 /* Мобильные устройства (до 768px) */
 @media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        gap: 20px;
-    }
+  nav {
+    flex-direction: column;
+    gap: 20px;
+  }
 
-    .nav-links, .nav-utility {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+  .nav-links,
+  .nav-utility {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-    .hero {
-        height: 400px;
-    }
+  .hero {
+    height: 400px;
+  }
 
-    .hero-content {
-        padding: 20px;
-    }
+  .hero-content {
+    padding: 20px;
+  }
 
-    .monsoon-banner h2 {
-        font-size: 24px;
-    }
+  .monsoon-banner h2 {
+    font-size: 24px;
+  }
 
-    .product-grid {
-        grid-template-columns: 1fr;
-    }
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
 
-    .banner-content {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
-    }
+  .banner-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
 
-    .about-text {
-        padding: 30px 20px;
-        width: 100%;
-        margin-top: 0;
-    }
+  .about-text {
+    padding: 30px 20px;
+    width: 100%;
+    margin-top: 0;
+  }
 
-    .social-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .social-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-    .footer-content {
-        flex-direction: column;
-    }
+  .footer-content {
+    flex-direction: column;
+  }
 
-    .footer-links {
-        flex-direction: column;
-        gap: 30px;
-    }
+  .footer-links {
+    flex-direction: column;
+    gap: 30px;
+  }
 
-    .footer-newsletter {
-        text-align: left;
-    }
+  .footer-newsletter {
+    text-align: left;
+  }
 }
