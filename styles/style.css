@@ -17,7 +17,7 @@
 body {
   font-family: var(--font-main);
   color: var(--color-text);
-  background-color: var(--color-beige); /* Возвращаем бежевый фон */
+  background-color: #e5e5e5; /* Возвращаем бежевый фон */
   line-height: 1.6;
   overflow-x: hidden;
 }
@@ -47,12 +47,17 @@ ul {
 
 /* --- ВЕРХНЯЯ ПАНЕЛЬ --- */
 .announcement-bar {
-  background-color: var(--color-terracotta);
-  color: var(--color-white);
+  background-color: rgba(241, 211, 185, 1); /* терракотовый фон */
+  color: #ffffff; /* белый текст для контраста */
   text-align: center;
   padding: 8px 0;
-  font-size: 12px;
+  font-family: "Roboto", sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.6; /* универсальное значение вместо жёстких px */
   letter-spacing: 0.5px;
+  width: 100%; /* на всю ширину контейнера */
+  box-sizing: border-box; /* чтобы padding не увеличивал общую ширину */
 }
 
 /* --- ШАПКА (HEADER) --- */
@@ -70,19 +75,48 @@ nav {
 .nav-links,
 .nav-utility {
   display: flex;
-  gap: 20px;
-  font-size: 14px;
+  font-size: 18px;
+
+  color: rgba(180, 96, 77, 1);
+  font-family: "Roboto";
+  font-weight: 400;
+  line-height: 28.8px;
+  letter-spacing: 0%;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.nav-links li {
+  margin-right: 30px;
+}
+
+.nav-links li:nth-child(2) a {
+  margin-right: 38px;
+}
+
+.nav-utility li {
+  margin-right: 20px;
+}
+.nav-utility li:nth-child(2) {
+  margin-right: 0px;
+}
+
+.nav-utility li:nth-child(3) {
+  margin-right: 0px;
 }
 
 .logo img {
-  height: 40px; /* Фиксируем высоту логотипа */
-  width: auto;
+  width: 120px;
+  height: 56px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 160px;
 }
 
 /* --- ГЛАВНЫЙ БАННЕР (HERO) --- */
 .hero {
   position: relative;
-  height: 600px; /* Можно изменить на 435px для точного соответствия Figma */
+  height: 435px;
   background-color: #ccc;
   background-image: url(../images/hero_img.png);
   background-size: cover;
@@ -95,10 +129,7 @@ nav {
 
 .hero-content {
   background-color: var(--color-sage);
-  padding: 30px 50px; /* Уменьшили вертикальные отступы, так как осталась только кнопка */
   color: var(--color-white);
-  max-width: 550px; /* Оставляем ширину, чтобы блок выглядел как в макете */
-  width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
