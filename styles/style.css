@@ -599,14 +599,26 @@ footer {
     gap: 0;
   }
 
+  .about-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
   .about-image img {
+    max-width: 100%;
     height: 500px;
+    margin: 0 auto;
+    object-fit: cover;
   }
 
   .about-text {
-    margin-left: 0;
+    position: static;
+    transform: none;
+    margin: 0 auto;
     margin-top: -50px;
     width: 90%;
+    max-width: 518px;
     padding: 40px;
   }
 
