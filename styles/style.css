@@ -294,7 +294,7 @@ nav {
 
 /* --- БАННЕР --- */
 .banner-section {
-  padding: 60px 0;
+  padding: 20px 0 50px 0;
   background-color: #ffffff;
 }
 
@@ -320,6 +320,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-height: 92px;
 }
 
 .banner-box p {
@@ -338,7 +339,7 @@ nav {
 
 /* --- СЕКЦИЯ "MEET DAE" --- */
 .about-section {
-  padding: 100px 0;
+  padding: 61px 0;
   background-color: #f1d3b9;
   min-height: 1069px;
 }
@@ -366,7 +367,7 @@ nav {
   padding: 60px 50px;
   position: absolute;
   right: 157px;
-  top: 50%;
+  top: 54%;
   transform: translateY(-50%);
   z-index: 2;
   max-width: 518px;
@@ -395,15 +396,18 @@ nav {
 
 /* --- СОЦИАЛЬНЫЕ СЕТИ --- */
 .social-section {
-  padding: 60px 0;
+  padding-top: 11px;
   text-align: center;
-  background-color: #ffffff;
+  background-color: var(--color-beige);
 }
 
-.social-section h2 {
-  font-size: 20px;
-  font-weight: normal;
-  margin-bottom: 30px;
+.social-content {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 1.1fr;
+  gap: 10px;
+
+  align-items: start;
+  text-align: left;
 }
 
 .social-grid {
@@ -418,6 +422,54 @@ nav {
   object-fit: cover;
 }
 
+.social-links {
+  display: flex;
+  margin-left: 30px;
+  gap: 120px;
+}
+
+.social-links ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.social-links a {
+  /* Sustainability */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 140% */
+
+  color: #b45f4d;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
+
+.social-info {
+  text-align: left;
+  padding-left: 20px;
+}
+
+.social-info p {
+  /* ONLY GOOD HAIR DAES AHEAD—AND 10% OFF YOUR FIRST ORDER */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  /* identical to box height, or 160% */
+
+  color: #c17c6c;
+}
+
 /* --- ПОДВАЛ (FOOTER) --- */
 footer {
   background-color: var(--color-beige);
@@ -425,39 +477,10 @@ footer {
   font-size: 12px;
 }
 
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 40px;
-  margin-bottom: 40px;
-}
-
-.footer-links {
-  display: flex;
-  gap: 60px;
-}
-
-.footer-links ul {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.footer-links a:hover {
-  text-decoration: underline;
-}
-
-.footer-newsletter {
-  max-width: 350px;
-  text-align: right;
-}
-
-.footer-newsletter p {
-  margin-bottom: 10px;
-}
-
 .copyright {
+  font-size: 12px;
+  color: var(--color-text);
+  margin: 0;
   border-top: 1px solid #ddd;
   padding-top: 20px;
   text-align: left;
