@@ -13,6 +13,12 @@
   margin: 0;
   padding: 0;
 }
+ul,
+li,
+a {
+  padding: 0;
+  margin: 0;
+}
 
 body {
   font-family: var(--font-main);
@@ -138,7 +144,7 @@ nav {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  padding-bottom: 60px;
+  padding-bottom: 59px;
 }
 
 .hero-content {
@@ -157,15 +163,25 @@ nav {
 
 .btn {
   display: inline-block;
+  width: 128px;
+  height: 48px;
   background-color: var(--color-terracotta);
   color: var(--color-white);
   padding: 12px 24px;
-  text-transform: uppercase;
-  font-size: 12px;
-  letter-spacing: 1px;
+
   border: none;
   cursor: pointer;
   transition: background 0.3s;
+
+  /* SHOP NOW */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 29px;
+  /* identical to box height, or 169% */
+
+  color: #ffffff;
 }
 
 .btn:hover {
@@ -255,7 +271,7 @@ nav {
   width: 100%;
   height: 567px;
   object-fit: cover;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 .product-card h4 {
@@ -300,7 +316,7 @@ nav {
 
 /* --- БАННЕР --- */
 .banner-section {
-  padding: 20px 0 50px 0;
+  padding: 31px 0 43px 0;
   background-color: #ffffff;
 }
 
@@ -386,18 +402,36 @@ nav {
   font-weight: normal;
   margin-bottom: 25px;
   color: var(--color-terracotta);
+  text-align: center;
 }
 
 .about-text p {
-  font-size: 15px;
-  line-height: 1.8;
-  margin-bottom: 20px;
+  /* We’re a haircare line based in sunny Arizona. Our products are made up of the many things that make our home special, including the scent of orange blossoms in the air, colors of majestic sunsets and nourishing ingredients derived from desert botanicals. We believe haircare doesn’t have to be complicated and aimed to make a line that is simple and effective. We hope that dae plays a special role in your everyday hair routine from sunrise to sunset and allows you to feel the warmth of the desert wherever you are. */
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 30px;
+  /* or 160% */
+
+  color: #b45f4d;
+  padding-bottom: 30px;
 }
 
 .about-text a {
-  color: var(--color-terracotta);
-  text-decoration: underline;
-  font-size: 14px;
+  /* Read More */
+  width: 80px;
+  height: 26px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  /* identical to box height, or 160% */
+
+  color: #b45f4d;
 }
 
 /* --- СОЦИАЛЬНЫЕ СЕТИ --- */
@@ -409,7 +443,7 @@ nav {
 
 .social-content {
   display: grid;
-  grid-template-columns: 1fr 0.5fr 1.1fr;
+  grid-template-columns: 1fr 0.35fr 1fr;
   gap: 10px;
 
   align-items: start;
@@ -418,16 +452,15 @@ nav {
 
 .social-links {
   display: flex;
-  margin-left: 30px;
-  gap: 120px;
+  margin-left: 50px;
+  gap: 115px;
 }
 
 .social-links ul {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 5px;
   list-style: none;
-  margin-bottom: 20px;
 }
 
 .social-links a {
@@ -436,7 +469,7 @@ nav {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 10px;
   /* identical to box height, or 140% */
 
   color: #b45f4d;
@@ -448,7 +481,16 @@ nav {
 }
 
 .social_h3 {
-  margin-top: 20px;
+  /* Follow Us @daehair */
+  font-family: "Roboto";
+  font-weight: 300;
+  font-size: 20px;
+  letter-spacing: 0%;
+  /* identical to box height, or 170% */
+
+  color: #000000;
+
+  margin-top: 16px;
 }
 
 .social-info {
@@ -462,7 +504,7 @@ nav {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 22px;
+  line-height: 19px;
   /* identical to box height, or 160% */
 
   color: #c17c6c;
@@ -472,13 +514,31 @@ nav {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 9.5px;
-  margin: 0 auto;
+  margin-top: 14px;
+  padding-bottom: 10px;
 }
 
-.social-grid img {
-  max-width: 230px;
-  min-height: 130px;
+.social-item {
+  position: relative;
+}
+
+.social-item > img:first-child {
+  width: 100%;
+  height: 130px;
   object-fit: cover;
+}
+
+.social-logo {
+  position: absolute;
+  top: calc(50% + 32px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 46px;
+  height: 46px;
+  object-fit: cover;
+  border-radius: 50%;
+  opacity: 1;
+  pointer-events: none;
 }
 
 /* --- ПОДВАЛ (FOOTER) --- */
@@ -489,12 +549,10 @@ footer {
 }
 
 .copyright {
-  font-size: 12px;
-  color: var(--color-text);
   margin: 0;
-  border-top: 1px solid #ddd;
-  padding-top: 20px;
-  text-align: left;
+  padding-top: 15px;
+  padding-bottom: 62px;
+  padding-left: 20px;
 }
 .copy {
   /* © 2021 */
