@@ -44,6 +44,12 @@ ul {
   padding: 0 20px;
   width: 100%;
 }
+.container-social {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 2px;
+  width: 100%;
+}
 
 /* --- ВЕРХНЯЯ ПАНЕЛЬ --- */
 .announcement-bar {
@@ -385,7 +391,7 @@ nav {
 .about-text p {
   font-size: 15px;
   line-height: 1.8;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .about-text a {
@@ -408,18 +414,6 @@ nav {
 
   align-items: start;
   text-align: left;
-}
-
-.social-grid {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 10px;
-}
-
-.social-grid img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
 }
 
 .social-links {
@@ -453,6 +447,10 @@ nav {
   text-decoration: underline;
 }
 
+.social_h3 {
+  margin-top: 20px;
+}
+
 .social-info {
   text-align: left;
   padding-left: 20px;
@@ -470,6 +468,19 @@ nav {
   color: #c17c6c;
 }
 
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 9.5px;
+  margin: 0 auto;
+}
+
+.social-grid img {
+  max-width: 230px;
+  min-height: 130px;
+  object-fit: cover;
+}
+
 /* --- ПОДВАЛ (FOOTER) --- */
 footer {
   background-color: var(--color-beige);
@@ -484,6 +495,41 @@ footer {
   border-top: 1px solid #ddd;
   padding-top: 20px;
   text-align: left;
+}
+.copy {
+  /* © 2021 */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  /* identical to box height, or 160% */
+
+  color: #c17c6c;
+}
+
+.copy1 {
+  /* dae */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  /* identical to box height, or 160% */
+
+  color: #b45f4d;
+}
+
+.copy2 {
+  /* . All rights reserved. */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  /* identical to box height, or 160% */
+
+  color: #c17c6c;
 }
 
 /* --- АДАПТИВНОСТЬ (MEDIA QUERIES) --- */
